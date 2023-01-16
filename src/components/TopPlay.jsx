@@ -60,12 +60,10 @@ const TopPlay = () => {
   const topPlays = data?.slice(0, 5);
 
   const handlePauseClick = () => {
-    console.log("PAUSING");
     dispatch(playPause(false));
   };
 
   const handlePlayClick = (song, i) => {
-    console.log("PLAYING");
     dispatch(setActiveSong({ song, data, i }));
     dispatch(playPause(true));
   };
